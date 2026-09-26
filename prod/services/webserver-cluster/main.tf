@@ -11,7 +11,7 @@ terraform {
   }
 }
 module "webserver_cluster" {
-  source                 = "../../../modules/services/webserver-cluster"
+  source                 = "github.com/keshavlearndevops/terraform-modules//services/webserver-cluster?ref=v0.0.2"
   cluster_name           = "webserver-prod"
   db_remote_state_bucket = "terraform-backend-1021-kez"
   db_remote_state_key    = "prod/data-store/mysql/terraform.tfstate"
